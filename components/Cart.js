@@ -36,7 +36,7 @@ const Cart = () => {
                           updateCartProduct(e.target.value, product)
                         }
                       >
-                        <option defaultValue={product.quantity}>{product.quantity}</option>
+                        <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
