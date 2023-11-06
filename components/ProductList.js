@@ -11,14 +11,14 @@ const ProductList = () => {
           products.map((product, i) => {
             return (
               <Link className=" shadow-md p-2" href={`/product/${product.id}`} key={i}>
-                <h1>{product.title}</h1>
+                <h1 className="py-2">{product.title}</h1>
 
                 <img
                   src={product.thumbnail}
                   className="h-[250px] w-full object-cover"
                   alt="product"
                 />
-                <div className="flex justify-between w-full">
+                <div className="flex mt-2 justify-between w-full">
                   <h1>{product.brand}</h1>
                   <h1> ${product.price}</h1>
                 </div>

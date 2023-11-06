@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { redirect } from "next/navigation";

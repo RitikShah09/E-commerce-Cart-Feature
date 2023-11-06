@@ -1,7 +1,6 @@
 "use client";
 import { useDispatch, useSelector } from "react-redux";
 import { updateCart } from "@/store/Reducers/cartReducers";
-import { redirect } from "next/navigation";
 const Cart = () => {
   const dispatch = useDispatch();
   const { items } = useSelector((state) => state.cart);
@@ -13,13 +12,13 @@ const Cart = () => {
       {items && items.length < 1 ? (
         <h1 className="text-center font-bold py-20">Cart Is Empty</h1>
       ) : (
-        <div className="flex pt-20 space-y-2 flex-col py-5">
+        <div className="flex mt-10 sm:mt-0 pt-20 space-y-2 flex-col py-5">
           {items &&
             items.map((product, i) => {
               return (
                 <div
                   key={i}
-                  className="flex space-x-3 sm:space-x-2 sm:text-sm justify-center items-center"
+                  className="flex space-x-3  sm:space-x-2 sm:text-sm justify-center items-center"
                 >
                   <img
                     src={product.thumbnail}

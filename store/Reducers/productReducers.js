@@ -17,18 +17,12 @@ export const productReducer = createSlice({
     productByCategories: (state, action) => {
       state.categories = action.payload;
     },
-    isError: (state, action) => {
-      state.error.push(action.payload);
-    },
-    removeError: (state, action) => {
-      state.error = [];
-    },
     productById: (state, action) => {
       state.selectedProduct = action.payload;
     },
   },
 });
 
-export const {allProduct, productByCategories, productByFilter, productById, isError, removeError } = productReducer.actions;
+export const {allProduct, productByCategories, productById } = productReducer.actions;
 
 export default productReducer.reducer;
